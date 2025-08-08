@@ -23,6 +23,9 @@ public class ModCreativeTabs {
                         output.accept(moditems.SINGLE.get());
                         output.accept(moditems.CHARGER.get());
                         output.accept(modblocks.REACTOR.get());
+                        output.accept(modblocks.SINGLE_ORE.get());
+                        output.accept(moditems.SHIT.get());
+                        output.accept(moditems.VACUUM_FUEL_STICK.get());
                     })
                     .build());
 

@@ -1,5 +1,6 @@
 package net.marcus.marcusmod.item;
 
+import net.marcus.marcusmod.item.custom.fuel_item;
 import net.marcus.marcusmod.marcusmod;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,6 +16,12 @@ public class moditems {
             () -> new Item( new Item.Properties()));
     public static final RegistryObject<Item> CHARGER = ITEMS.register("charger",
             () -> new Item( new Item.Properties()));
+
+    public static final RegistryObject<Item> SHIT = ITEMS.register("shit",
+            () -> new Item( new Item.Properties().food(modfoods.SHIT)));
+
+    public static final RegistryObject<Item> VACUUM_FUEL_STICK = ITEMS.register("vacuum_fuel_stick",
+            () -> new fuel_item( new Item.Properties(), 600));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

@@ -2,5 +2,8 @@
   "item.marcusmod.single": "始源奇点",
   "item.marcusmod.charger": "电容器",
   "creative.marcus_mod": "重返未来",
-  "block.marcusmod.reactor": "反应堆"
+  "block.marcusmod.reactor": "反应堆",
+  "block.marcusmod.single_ore": "始源矿",
+  "item.marcusmod.shit": "史",
+  "item.marcusmod.vacuum_fuel_stick": "真空能约束棒"
 }
