@@ -5,5 +5,6 @@
   "block.marcusmod.reactor": "反应堆",
   "block.marcusmod.single_ore": "始源矿",
   "item.marcusmod.shit": "史",
-  "item.marcusmod.vacuum_fuel_stick": "真空能约束棒"
+  "item.marcusmod.vacuum_fuel_stick": "真空能约束棒",
+  "item.marcusmod.detector": "格雷矿脉探测器"
 }

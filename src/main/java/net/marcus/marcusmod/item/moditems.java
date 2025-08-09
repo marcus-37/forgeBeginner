@@ -1,5 +1,6 @@
 package net.marcus.marcusmod.item;
 
+import net.marcus.marcusmod.item.custom.GregFindOreItem;
 import net.marcus.marcusmod.item.custom.fuel_item;
 import net.marcus.marcusmod.marcusmod;
 import net.minecraft.world.item.Item;
@@ -12,8 +13,10 @@ public class moditems {
     public static final DeferredRegister<Item> ITEMS =
         DeferredRegister.create(ForgeRegistries.ITEMS, marcusmod.MOD_ID);
 
+
     public static final RegistryObject<Item> SINGLE = ITEMS.register("single",
             () -> new Item( new Item.Properties()));
+
     public static final RegistryObject<Item> CHARGER = ITEMS.register("charger",
             () -> new Item( new Item.Properties()));
 
@@ -22,6 +25,10 @@ public class moditems {
 
     public static final RegistryObject<Item> VACUUM_FUEL_STICK = ITEMS.register("vacuum_fuel_stick",
             () -> new fuel_item( new Item.Properties(), 600));
+
+    public static final RegistryObject<Item> DETECTOR = ITEMS.register("detector",
+            () -> new GregFindOreItem( new Item.Properties().durability(100)));
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

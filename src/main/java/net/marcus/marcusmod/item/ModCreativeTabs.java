@@ -26,6 +26,7 @@ public class ModCreativeTabs {
                         output.accept(modblocks.SINGLE_ORE.get());
                         output.accept(moditems.SHIT.get());
                         output.accept(moditems.VACUUM_FUEL_STICK.get());
+                        output.accept(moditems.DETECTOR.get());
                     })
                     .build());
 
