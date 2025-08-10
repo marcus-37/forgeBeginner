@@ -28,6 +28,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(modblocks.REACTOR.get());
+        this.dropSelf(modblocks.REACTOR_FENCE.get());
+        this.dropSelf(modblocks.REACTOR_BUTTON.get());
+        this.dropSelf(modblocks.REACTOR_TRAPDOOR.get());
+        this.dropSelf(modblocks.REACTOR_FENCE_GATE.get());
+        this.dropSelf(modblocks.REACTOR_PRESSURE_PLATE.get());
+        this.dropSelf(modblocks.REACTOR_STAIR.get());
+        this.dropSelf(modblocks.REACTOR_WALL.get());
+
+        this.add(modblocks.REACTOR_DOOR.get(),
+                block -> createDoorTable(modblocks.REACTOR_DOOR.get()));
+        this.add(modblocks.REACTOR_SLAB.get(),
+                block -> createSlabItemTable(modblocks.REACTOR_SLAB.get()));
+
         this.add(modblocks.SINGLE_ORE.get(),
                 block -> createCopperLikeOreDrops(modblocks.SINGLE_ORE.get(), moditems.SINGLE.get()));
     }

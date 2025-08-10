@@ -6,5 +6,19 @@
   "block.marcusmod.single_ore": "始源矿",
   "item.marcusmod.shit": "史",
   "item.marcusmod.vacuum_fuel_stick": "真空能约束棒",
-  "item.marcusmod.detector": "格雷矿脉探测器"
+  "item.marcusmod.detector": "格雷矿脉探测器",
+  "item.marcusmod.single_helmet": "奇点头盔",
+  "item.marcusmod.chestplate": "奇点胸甲",
+  "item.marcusmod.legging": "奇点护腿",
+  "item.marcusmod.boots": "奇点靴子",
+
+  "block.marcusmod.reactor_stair": "反应堆楼梯",
+  "block.marcusmod.reactor_door": "反应堆门",
+  "block.marcusmod.reactor_fence": "反应堆栅栏",
+  "block.marcusmod.reactor_fence_gate": "反应堆栅栏门",
+  "block.marcusmod.reactor_button": "反应堆按钮",
+  "block.marcusmod.reactor_trapdoor": "反应堆活板门",
+  "block.marcusmod.reactor_slab": "反应堆半砖",
+  "block.marcusmod.reactor_wall": "反应堆墙",
+  "block.marcusmod.reactor_pressure_plate": "反应堆压力板"
 }

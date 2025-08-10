@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    public static final List<ItemLike> SINGLE_SMELTING_TABLES = List.of(modblocks.SINGLE_ORE.get());
+    public static final List<ItemLike> SINGLE_SMELTING_TABLES = List.of(moditems.SINGLE.get());
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);

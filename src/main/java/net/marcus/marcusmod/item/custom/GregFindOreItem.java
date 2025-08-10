@@ -53,7 +53,7 @@ public class GregFindOreItem extends Item {
             for(int i = 0; i <= blockpos.getY(); i++) {
                 BlockState state = pContext.getLevel().getBlockState(blockpos.below(i));
                 if(isOreBlock(state)) {
-                    if(player.isCrouching()) {
+                    if(player.isShiftKeyDown()) {
                         Breaking(pContext.getLevel(), blockpos.below(i));
                         TeleportPlayer(player, blockpos.below(i));
                     }

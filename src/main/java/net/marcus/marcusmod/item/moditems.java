@@ -1,8 +1,10 @@
 package net.marcus.marcusmod.item;
 
 import net.marcus.marcusmod.item.custom.GregFindOreItem;
+import net.marcus.marcusmod.item.custom.ModArmorMaterials;
 import net.marcus.marcusmod.item.custom.fuel_item;
 import net.marcus.marcusmod.marcusmod;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,6 +30,15 @@ public class moditems {
 
     public static final RegistryObject<Item> DETECTOR = ITEMS.register("detector",
             () -> new GregFindOreItem( new Item.Properties().durability(100)));
+
+    public static final RegistryObject<Item> SINGLE_HELMET = ITEMS.register("single_helmet",
+            () -> new ArmorItem(ModArmorMaterials.SINGLE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> SINGLE_CHESTPLATE = ITEMS.register("single_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.SINGLE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> SINGLE_LEGGING = ITEMS.register("single_legging",
+            () -> new ArmorItem(ModArmorMaterials.SINGLE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> SINGLE_BOOTS = ITEMS.register("single_boots",
+            () -> new ArmorItem(ModArmorMaterials.SINGLE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
 
     public static void register(IEventBus eventBus){

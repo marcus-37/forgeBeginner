@@ -27,6 +27,20 @@ public class ModCreativeTabs {
                         output.accept(moditems.SHIT.get());
                         output.accept(moditems.VACUUM_FUEL_STICK.get());
                         output.accept(moditems.DETECTOR.get());
+                        output.accept(modblocks.REACTOR_DOOR.get());
+                        output.accept(modblocks.REACTOR_BUTTON.get());
+                        output.accept(modblocks.REACTOR_SLAB.get());
+                        output.accept(modblocks.REACTOR_WALL.get());
+                        output.accept(modblocks.REACTOR_STAIR.get());
+                        output.accept(modblocks.REACTOR_PRESSURE_PLATE.get());
+                        output.accept(modblocks.REACTOR_TRAPDOOR.get());
+                        output.accept(modblocks.REACTOR_FENCE_GATE.get());
+                        output.accept(modblocks.REACTOR_FENCE.get());
+                        output.accept(moditems.SINGLE_CHESTPLATE.get());
+                        output.accept(moditems.SINGLE_BOOTS.get());
+                        output.accept(moditems.SINGLE_LEGGING.get());
+                        output.accept(moditems.SINGLE_HELMET.get());
+
                     })
                     .build());
 
