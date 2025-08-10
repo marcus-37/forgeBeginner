@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_single": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "marcusmod:single"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "marcusmod:vacuum_fuel_stick_from_smelting_single"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_single",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "marcusmod:vacuum_fuel_stick_from_smelting_single"
+    ]
+  },
+  "sends_telemetry_event": false
+}

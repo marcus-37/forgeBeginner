@@ -1,0 +1,8 @@
+// 1.20.1	2025-08-10T15:01:33.5500263	Tags for minecraft:block mod id marcusmod
+c10ed28fe556ba0c42128858faf0165b6117a23c data/marcusmod/tags/blocks/test_ores.json
+a308299424b46aa5a23135469f5bb245ae47a74d data/minecraft/tags/blocks/fences.json
+7dfec7361aad869bb8a8fa24e9aafdd4abe1e17f data/minecraft/tags/blocks/fence_gates.json
+082762fcd1280e113bbaa1abbb26bcb19bc188a7 data/minecraft/tags/blocks/mineable/pickaxe.json
+9e00c684cda42d4c6567a650307fb2f833739873 data/minecraft/tags/blocks/needs_diamond_tool.json
+ea3b0aa262c1a78d1ea3b22b523b60283dd6beb6 data/minecraft/tags/blocks/needs_iron_tool.json
+a0eca90e48ecd6866c5ca4b940c9f8984e793686 data/minecraft/tags/blocks/walls.json

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "marcusmod:block/reactor_slab"
+    },
+    "type=double": {
+      "model": "marcusmod:block/reactor"
+    },
+    "type=top": {
+      "model": "marcusmod:block/reactor_slab_top"
+    }
+  }
+}

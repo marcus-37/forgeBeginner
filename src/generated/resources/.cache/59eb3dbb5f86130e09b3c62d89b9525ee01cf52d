@@ -1,0 +1,12 @@
+// 1.20.1	2025-08-10T15:01:33.5500263	Loot Tables
+c1dd2101f49d99fb5d7d5938cb16390f70f2341c data/marcusmod/loot_tables/blocks/reactor.json
+12b47708569d7b9fac3f5a160a6cc828f5928638 data/marcusmod/loot_tables/blocks/reactor_button.json
+d81d28c94f83c18f3e85b65a9e8642ed1c72dbed data/marcusmod/loot_tables/blocks/reactor_door.json
+4b19bbe819c3f8036a330f3172517fedfb219306 data/marcusmod/loot_tables/blocks/reactor_fence.json
+151b13c6f8c7bfbd63e27ac970f035636fd2afd2 data/marcusmod/loot_tables/blocks/reactor_fence_gate.json
+cde88ea54aa94db12f4cf73e610f573219314da7 data/marcusmod/loot_tables/blocks/reactor_pressure_plate.json
+4b441320c8282c5ee5ff8a0bffec9a7c5b707df7 data/marcusmod/loot_tables/blocks/reactor_slab.json
+b9b39e8519e01aa4fb0b14e4fdf373549747a212 data/marcusmod/loot_tables/blocks/reactor_stair.json
+681932baefb2da78e7f7ee33ffc8cc5179bf9db2 data/marcusmod/loot_tables/blocks/reactor_trapdoor.json
+15fe122fb70e0e0432097324192dbab59e18fd23 data/marcusmod/loot_tables/blocks/reactor_wall.json
+eadde12efc9e581ffc8c9dfbb118279eea57c9d6 data/marcusmod/loot_tables/blocks/single_ore.json

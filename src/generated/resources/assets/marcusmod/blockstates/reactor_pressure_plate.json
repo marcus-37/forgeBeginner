@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "marcusmod:block/reactor_pressure_plate"
+    },
+    "powered=true": {
+      "model": "marcusmod:block/reactor_pressure_plate_down"
+    }
+  }
+}

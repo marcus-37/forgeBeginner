@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "marcusmod:item/vacuum_fuel_stick"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "values": [
+    "marcusmod:reactor",
+    "marcusmod:single_ore",
+    "marcusmod:reactor_fence_gate",
+    "marcusmod:reactor_fence",
+    "marcusmod:reactor_door",
+    "marcusmod:reactor_wall",
+    "marcusmod:reactor_slab",
+    "marcusmod:reactor_pressure_plate",
+    "marcusmod:reactor_trapdoor",
+    "marcusmod:reactor_button",
+    "marcusmod:reactor_stair"
+  ]
+}

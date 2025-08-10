@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "single",
+  "ingredient": {
+    "item": "marcusmod:single"
+  },
+  "result": "marcusmod:vacuum_fuel_stick"
+}

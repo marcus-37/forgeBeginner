@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "s": {
+      "item": "marcusmod:single"
+    },
+    "t": {
+      "item": "marcusmod:shit"
+    }
+  },
+  "pattern": [
+    "sss",
+    "sts"
+  ],
+  "result": {
+    "item": "marcusmod:detector"
+  },
+  "show_notification": true
+}

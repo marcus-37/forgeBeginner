@@ -1,0 +1,19 @@
+// 1.20.1	2025-08-10T22:42:32.567004	Item Models: marcusmod
+c9d47546176937e825993020c0239606547eef00 assets/marcusmod/models/item/charger.json
+9a00697b72a205c66ee6edaf283766d7a8c6730c assets/marcusmod/models/item/detector.json
+3fc3084b98b490c611b8e04a1d105125f5e71dcb assets/marcusmod/models/item/reactor_button.json
+adc546db06dcd506ff6d22b428851dafc54237e3 assets/marcusmod/models/item/reactor_door.json
+d4cdc3fb31c4f7dd588fb790941a208cdc80a00c assets/marcusmod/models/item/reactor_fence.json
+0b51b378489dac5d1804c92950db89ccb3e136c8 assets/marcusmod/models/item/reactor_fence_gate.json
+a6969ebbc96a0b7b07486e8dfd0241e66a80dcf0 assets/marcusmod/models/item/reactor_pressure_plate.json
+7ec9254e27503fdc37a1ac287f29730cf511bc44 assets/marcusmod/models/item/reactor_slab.json
+44ba2d005de9a75ebf74e669c8acee7f35d96319 assets/marcusmod/models/item/reactor_stair.json
+73411d5e13b0e0269817e4d95efa5343b23c7a8a assets/marcusmod/models/item/reactor_trapdoor.json
+fc80b58e45b735a897bed5f0a53d501882e49871 assets/marcusmod/models/item/reactor_wall.json
+a6afdaba919d301c206ddae97fed8b2913c27520 assets/marcusmod/models/item/shit.json
+588f68717a554818bed36b837388851f7a3744d1 assets/marcusmod/models/item/single.json
+ecc10a2edede287ed4da4114fb2693ef69bdc7af assets/marcusmod/models/item/single_boots.json
+1ea638080027422dcf74e943681e2925fe9fe515 assets/marcusmod/models/item/single_chestplate.json
+77cf333549ba6fdaa50da6865788c0660e508c72 assets/marcusmod/models/item/single_helmet.json
+58ac9be912614b90aac6e3032e6d0bc89cc57411 assets/marcusmod/models/item/single_legging.json
+5c95596d54d71af06fb822804c4ae348a01c1903 assets/marcusmod/models/item/vacuum_fuel_stick.json

@@ -1,0 +1,9 @@
+// 1.20.1	2025-08-10T15:01:33.5500263	Recipes
+31d06d94b61820b6ac9482515ffc8069dd1cc3af data/marcusmod/advancements/recipes/misc/detector.json
+3ffe904252e45ceb694b1b4451e35e5b23590d08 data/marcusmod/advancements/recipes/misc/single.json
+fe214ee5447c86498edd9858f655274285a4d775 data/marcusmod/advancements/recipes/misc/vacuum_fuel_stick_from_blasting_single.json
+a390856806609155142998c9c88ad586eae689a4 data/marcusmod/advancements/recipes/misc/vacuum_fuel_stick_from_smelting_single.json
+cf9ab11693d5b8b7bef7938eef0873a2c42764d5 data/marcusmod/recipes/detector.json
+09dab3c8314f3a70b2513913f4ca9ef12c590205 data/marcusmod/recipes/single.json
+205906cc9f7856f8b492ad9de33d6bd91aa83b11 data/marcusmod/recipes/vacuum_fuel_stick_from_blasting_single.json
+a489adc40d1d86dc3eef261ae70e056223e5a2c5 data/marcusmod/recipes/vacuum_fuel_stick_from_smelting_single.json
