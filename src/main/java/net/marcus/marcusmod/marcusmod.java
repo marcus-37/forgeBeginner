@@ -2,8 +2,15 @@ package net.marcus.marcusmod;
 
 import com.mojang.logging.LogUtils;
 import net.marcus.marcusmod.block.modblocks;
+import net.marcus.marcusmod.entity.modblockentities;
 import net.marcus.marcusmod.item.ModCreativeTabs;
 import net.marcus.marcusmod.item.moditems;
+import net.marcus.marcusmod.recipe.Modrecipe;
+import net.marcus.marcusmod.screen.ModMenuTypes;
+import net.marcus.marcusmod.screen.crazyMachinescreen;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +41,12 @@ public class marcusmod
 
         moditems.register(modEventBus);
 
+        ModMenuTypes.register(modEventBus);
+
+        modblockentities.register(modEventBus);
+
+        Modrecipe.register(modEventBus);
+
         modblocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -62,6 +75,7 @@ public class marcusmod
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            MenuScreens.register(ModMenuTypes.CRAZY_MACHINE_MENU.get(), crazyMachinescreen::new);
         }
     }
 }

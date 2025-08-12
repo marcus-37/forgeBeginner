@@ -1,0 +1,17 @@
+{
+  "type": "marcusmod:crazy_crafting",
+  "ingredients": [
+    {
+      "item": "marcusmod:vacuum_fuel_stick",
+      "count": 64
+    },
+    {
+      "item": "marcusmod:shit",
+      "count": 1
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "marcusmod:single"
+  }
+}

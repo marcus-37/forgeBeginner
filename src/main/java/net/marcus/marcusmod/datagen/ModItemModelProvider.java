@@ -57,10 +57,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         //wallItem(modblocks.REACTOR_WALL, modblocks.REACTOR);
         wallInventory("reactor_wall", modLoc("block/reactor"));
 
-        //registerTrimmedArmor(moditems.SINGLE_BOOTS);
-        //registerTrimmedArmor(moditems.SINGLE_LEGGING);
-        //registerTrimmedArmor(moditems.SINGLE_HELMET);
-        //registerTrimmedArmor(moditems.SINGLE_CHESTPLATE);
+        trimmedArmorItem(moditems.SINGLE_BOOTS);
+        trimmedArmorItem(moditems.SINGLE_LEGGING);
+        trimmedArmorItem(moditems.SINGLE_HELMET);
+        trimmedArmorItem(moditems.SINGLE_CHESTPLATE);
 
 
     }
@@ -107,79 +107,65 @@ public class ModItemModelProvider extends ItemModelProvider {
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
     }
 
-    private void registerTrimmedArmor(RegistryObject<Item> itemRegistryObject) {
-        Item item = itemRegistryObject.get();
-        if (!(item instanceof ArmorItem)) return;
-        String itemPath = itemRegistryObject.getId().getPath();
-
-        // base model：item/generated + layer0 指向 item纹理
-        this.withExistingParent(itemPath, mcLoc("item/generated"))
-                .texture("layer0", modLoc("item/" + itemPath));
-        var baseBuilder = this.getBuilder(itemPath);
-
-        // 构造 trimMaterials 映射：ResourceKey<TrimMaterial> -> float(predict value)
-        Map<ResourceKey<TrimMaterial>, Float> trimMap = buildTrimMapFromTrimMaterials();
-
-        // 遍历每个 trim，生成 override 模型
-        for (Map.Entry<ResourceKey<TrimMaterial>, Float> e : trimMap.entrySet()) {
-            ResourceKey<TrimMaterial> trimKey = e.getKey();
-            float predicateIndex = e.getValue();
-
-            ResourceLocation trimRL = trimKey.location(); // e.g. minecraft:netherite
-            String trimName = trimRL.getPath();
-
-            // armor type: helmet/chestplate/leggings/boots
-            String armorType = switch (((ArmorItem) item).getEquipmentSlot()) {
-                case HEAD -> "helmet";
-                case CHEST -> "chestplate";
-                case LEGS -> "leggings";
-                case FEET -> "boots";
-                default -> "unknown";
-            };
-
-            // vanilla 常用的 trim texture 路径约定
-            ResourceLocation trimTexture = ResourceLocation.fromNamespaceAndPath(
-                    trimRL.getNamespace(),
-                    "trims/items/" + armorType + "_trim_" + trimName
-            );
-
-            // 告诉 datagen 这个纹理会存在（由 datapack 或其它 provider 提供）
-            this.existingFileHelper.trackGenerated(trimTexture, PackType.CLIENT_RESOURCES, ".png", "textures");
-
-            // 生成具体的 trim 模型文件：models/item/<item>_<trim>_trim.json
-            String trimModelName = itemPath + "_" + trimName + "_trim";
-            getBuilder(trimModelName)
-                    .parent(new ModelFile.UncheckedModelFile(mcLoc("item/generated")))
-                    .texture("layer0", modLoc("item/" + itemPath))
-                    .texture("layer1", trimTexture);
-
-            // 在 base 模型上添加 override（predicate = trim_type）
-            baseBuilder.override()
-                    .model(new ModelFile.UncheckedModelFile(modLoc(trimModelName)))
-                    .predicate(mcLoc("trim_type"), predicateIndex)
-                    .end();
-
-            // debug 输出：方便在 runData 时查看
-            System.out.println("[datagen] Prepared trim model for item=" + itemPath + " trim=" + trimRL + " idx=" + predicateIndex);
-        }
+    private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
+    static {
+        trimMaterials.put(TrimMaterials.QUARTZ, 0.1F);
+        trimMaterials.put(TrimMaterials.IRON, 0.2F);
+        trimMaterials.put(TrimMaterials.NETHERITE, 0.3F);
+        trimMaterials.put(TrimMaterials.REDSTONE, 0.4F);
+        trimMaterials.put(TrimMaterials.COPPER, 0.5F);
+        trimMaterials.put(TrimMaterials.GOLD, 0.6F);
+        trimMaterials.put(TrimMaterials.EMERALD, 0.7F);
+        trimMaterials.put(TrimMaterials.DIAMOND, 0.8F);
+        trimMaterials.put(TrimMaterials.LAPIS, 0.9F);
+        trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
     }
 
-    private Map<ResourceKey<TrimMaterial>, Float> buildTrimMapFromTrimMaterials() {
-        Map<ResourceKey<TrimMaterial>, Float> map = new LinkedHashMap<>();
+    private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
+        final String MOD_ID = marcusmod.MOD_ID; // Change this to your mod id
 
-        // 这些值直接对应于你贴出的 TrimMaterials.bootstrap(...) 的 pItemModelIndex
-        map.put(TrimMaterials.QUARTZ, 0.1F);
-        map.put(TrimMaterials.IRON, 0.2F);
-        map.put(TrimMaterials.NETHERITE, 0.3F);
-        map.put(TrimMaterials.REDSTONE, 0.4F);
-        map.put(TrimMaterials.COPPER, 0.5F);
-        map.put(TrimMaterials.GOLD, 0.6F);
-        map.put(TrimMaterials.EMERALD, 0.7F);
-        map.put(TrimMaterials.DIAMOND, 0.8F);
-        map.put(TrimMaterials.LAPIS, 0.9F);
-        map.put(TrimMaterials.AMETHYST, 1.0F);
+        if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
+            trimMaterials.forEach((trimMaterial, value) -> {
+                float trimValue = value;
 
-        return map;
+                String armorType = switch (armorItem.getEquipmentSlot()) {
+                    case HEAD -> "helmet";
+                    case CHEST -> "chestplate";
+                    case LEGS -> "leggings";
+                    case FEET -> "boots";
+                    default -> "";
+                };
+
+                String armorItemPath = armorItem.toString();
+                String trimPath = "trims/items/" + armorType + "_trim_" + trimMaterial.location().getPath();
+                String currentTrimName = armorItemPath + "_" + trimMaterial.location().getPath() + "_trim";
+                //ResourceLocation armorItemResLoc = ResourceLocation.parse(armorItemPath);
+                ResourceLocation trimResLoc = ResourceLocation.parse(trimPath); // minecraft namespace
+                ResourceLocation trimNameResLoc = ResourceLocation.parse(currentTrimName);
+                ResourceLocation armorItemResLoc = itemRegistryObject.getId();
+
+
+                // This is used for making the ExistingFileHelper acknowledge that this texture exist, so this will
+                // avoid an IllegalArgumentException
+                existingFileHelper.trackGenerated(trimResLoc, PackType.CLIENT_RESOURCES, ".png", "textures");
+
+                // Trimmed armorItem files
+                getBuilder(currentTrimName)
+                        .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                        .texture("layer0", armorItemResLoc.getNamespace() + ":item/" + armorItemResLoc.getPath())
+                        .texture("layer1", trimResLoc);
+
+                // Non-trimmed armorItem file (normal variant)
+                this.withExistingParent(itemRegistryObject.getId().getPath(),
+                                mcLoc("item/generated"))
+                        .override()
+                        .model(new ModelFile.UncheckedModelFile(trimNameResLoc.getNamespace()  + ":item/" + trimNameResLoc.getPath()))
+                        .predicate(mcLoc("trim_type"), trimValue).end()
+                        .texture("layer0",
+                                ResourceLocation.fromNamespaceAndPath(MOD_ID,
+                                        "item/" + itemRegistryObject.getId().getPath()));
+            });
+        }
     }
 
 }

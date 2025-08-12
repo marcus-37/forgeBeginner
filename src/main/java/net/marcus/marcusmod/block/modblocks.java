@@ -1,5 +1,6 @@
 package net.marcus.marcusmod.block;
 
+import net.marcus.marcusmod.block.custom.CrazyMachineBlock;
 import net.marcus.marcusmod.item.moditems;
 import net.marcus.marcusmod.marcusmod;
 import net.minecraft.sounds.SoundEvent;
@@ -58,6 +59,9 @@ public class modblocks {
     public static final RegistryObject<Block> REACTOR_TRAPDOOR = registerBlock("reactor_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion(),
                     BlockSetType.IRON));
+
+    public static final RegistryObject<Block> CRAZY_MACHINE = registerBlock("crazy_machine",
+            () -> new CrazyMachineBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

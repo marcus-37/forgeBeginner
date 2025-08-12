@@ -35,6 +35,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(modblocks.REACTOR_PRESSURE_PLATE.get());
         this.dropSelf(modblocks.REACTOR_STAIR.get());
         this.dropSelf(modblocks.REACTOR_WALL.get());
+        this.dropSelf(modblocks.CRAZY_MACHINE.get());
 
         this.add(modblocks.REACTOR_DOOR.get(),
                 block -> createDoorTable(modblocks.REACTOR_DOOR.get()));

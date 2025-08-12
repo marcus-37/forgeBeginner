@@ -5,6 +5,7 @@ import net.marcus.marcusmod.marcusmod;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -29,6 +30,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock(((WallBlock) modblocks.REACTOR_WALL.get()), blockTexture(modblocks.REACTOR.get()));
         doorBlock(((DoorBlock) modblocks.REACTOR_DOOR.get()), "cutout", modLoc("block/reactor_door_bottom"),  modLoc("block/reactor_door_up"));
         trapdoorBlock(((TrapDoorBlock) modblocks.REACTOR_TRAPDOOR.get()), "cutout", modLoc("block/reactor_trapdoor"), true);
+
+        simpleBlockWithItem(modblocks.CRAZY_MACHINE.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/crazy_machine")));
+
     }
 
     private void BlockWithItem(RegistryObject<Block> blockRegistryObject) {

@@ -1,0 +1,18 @@
+{
+  "type": "marcusmod:crazy_crafting",
+  "ingredients": [
+    {
+      "item": "marcusmod:charger",
+      "count": 4
+    },
+    {
+      "item": "marcusmod:vacuum_fuel_stick",
+      "count": 4
+    }
+  ],
+  "process_time": 1000,
+  "result": {
+    "count": 2,
+    "item": "marcusmod:reactor"
+  }
+}

@@ -40,6 +40,7 @@ public class ModCreativeTabs {
                         output.accept(moditems.SINGLE_BOOTS.get());
                         output.accept(moditems.SINGLE_LEGGING.get());
                         output.accept(moditems.SINGLE_HELMET.get());
+                        output.accept(modblocks.CRAZY_MACHINE.get());
 
                     })
                     .build());

@@ -1,0 +1,22 @@
+{
+  "type": "marcusmod:crazy_crafting",
+  "ingredients": [
+    {
+      "item": "marcusmod:vacuum_fuel_stick"
+    },
+    {
+      "item": "marcusmod:shit"
+    },
+    {
+      "item": "marcusmod:reactor"
+    },
+    {
+      "item": "marcusmod:single"
+    }
+  ],
+  "process_time": 1000,
+  "result": {
+    "count": 1,
+    "item": "marcusmod:detector"
+  }
+}

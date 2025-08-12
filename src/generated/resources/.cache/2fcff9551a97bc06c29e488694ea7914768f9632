@@ -1,4 +1,5 @@
-// 1.20.1	2025-08-10T15:01:33.5500263	Block States: marcusmod
+// 1.20.1	2025-08-11T23:20:52.2021464	Block States: marcusmod
+e032034bf54a6ccdcb305c5d364270a0243574eb assets/marcusmod/blockstates/crazy_machine.json
 fca4a616b1aee5f838d1915b512ff9f84513c4c9 assets/marcusmod/blockstates/reactor.json
 7510a61037399f4e4f5a7d9469d93cbc7c88a3ac assets/marcusmod/blockstates/reactor_button.json
 3c6fc7bc54ebdd91a7aa2fc9a6d2e543619b3e6e assets/marcusmod/blockstates/reactor_door.json
@@ -41,5 +42,6 @@ e907dfa7567dd2cc4fab5b426aa3d602a05c6e1d assets/marcusmod/models/block/reactor_w
 b051d678834db787894ed0e23f8c1dfa20101cd5 assets/marcusmod/models/block/reactor_wall_side.json
 c8d70cb459b1a24d3908c604afb8ff0138b0bb38 assets/marcusmod/models/block/reactor_wall_side_tall.json
 86816cc3837b8c66d1aeb56862f167ef0303904a assets/marcusmod/models/block/single_ore.json
+37a3ca51f0449e09066a300a37d9e6c7553c3f80 assets/marcusmod/models/item/crazy_machine.json
 fd1a28fe768c1a6c3a8e209483cf3019c1482b5f assets/marcusmod/models/item/reactor.json
 883fa119faee7282c1f95ca7e3ab0a8ff3aa2d0a assets/marcusmod/models/item/single_ore.json
