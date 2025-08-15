@@ -1,29 +1,34 @@
-[118月2025 23:20:45.328] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\王睿阳\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.6, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, marcusmod, --all, --output, E:\forge1.20.1\src\generated\resources, --existing, E:\forge1.20.1\src\main\resources]
-[118月2025 23:20:45.333] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.16 by Microsoft; OS Windows 11 arch amd64 version 10.0
-[118月2025 23:20:45.448] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[118月2025 23:20:45.500] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/王睿阳/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[118月2025 23:20:45.723] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\王睿阳\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.6\9e86bf67e222253576e982856d9958695725adb5\javafmllanguage-1.20.1-47.4.6.jar is missing mods.toml file
-[118月2025 23:20:45.725] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\王睿阳\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.6\56100545804adc991cc48ab68b86ba46c5873246\lowcodelanguage-1.20.1-47.4.6.jar is missing mods.toml file
-[118月2025 23:20:45.727] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\王睿阳\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.6\fd228d7d879a9da774eda022ea3092cedb5178f1\mclanguage-1.20.1-47.4.6.jar is missing mods.toml file
-[118月2025 23:20:45.731] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\王睿阳\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.6\cefc55ada370ce2f23f92834530eb967c0de1fdd\fmlcore-1.20.1-47.4.6.jar is missing mods.toml file
-[118月2025 23:20:45.809] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[118月2025 23:20:46.917] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\王睿阳\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, marcusmod, --all, --output, E:\forge1.20.1\src\generated\resources, --existing, E:\forge1.20.1\src\main\resources]
-[118月2025 23:20:47.284] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [marcusmod]
-[118月2025 23:20:51.333] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.6, for MC 1.20.1 with MCP 20230612.114412
-[118月2025 23:20:51.337] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.6 Initialized
-[118月2025 23:20:51.768] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/王睿阳/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.6_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.6_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[118月2025 23:20:51.768] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/王睿阳/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.6_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.6_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[118月2025 23:20:51.967] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[118月2025 23:20:52.006] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 38 ms
-[118月2025 23:20:52.006] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[118月2025 23:20:52.055] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 48 ms
-[118月2025 23:20:52.055] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: marcusmod
-[118月2025 23:20:52.170] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: marcusmod finished after 114 ms
-[118月2025 23:20:52.170] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: marcusmod
-[118月2025 23:20:52.183] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: marcusmod finished after 13 ms
-[118月2025 23:20:52.184] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id marcusmod
-[118月2025 23:20:52.199] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id marcusmod finished after 14 ms
-[118月2025 23:20:52.199] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id marcusmod
-[118月2025 23:20:52.201] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id marcusmod finished after 1 ms
-[118月2025 23:20:52.201] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 233 ms
-[118月2025 23:20:52.207] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 133, old count: 132, new count: 134, removed stale: 0, written: 1
+[158月2025 00:27:47.954] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\王睿阳\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.6, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, marcusmod, --all, --output, E:\forge1.20.1\src\generated\resources, --existing, E:\forge1.20.1\src\main\resources]
+[158月2025 00:27:47.967] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.16 by Microsoft; OS Windows 11 arch amd64 version 10.0
+[158月2025 00:27:48.098] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[158月2025 00:27:48.162] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/王睿阳/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[158月2025 00:27:48.494] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\王睿阳\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.6\9e86bf67e222253576e982856d9958695725adb5\javafmllanguage-1.20.1-47.4.6.jar is missing mods.toml file
+[158月2025 00:27:48.498] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\王睿阳\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.6\56100545804adc991cc48ab68b86ba46c5873246\lowcodelanguage-1.20.1-47.4.6.jar is missing mods.toml file
+[158月2025 00:27:48.503] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\王睿阳\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.6\fd228d7d879a9da774eda022ea3092cedb5178f1\mclanguage-1.20.1-47.4.6.jar is missing mods.toml file
+[158月2025 00:27:48.508] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\王睿阳\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.6\cefc55ada370ce2f23f92834530eb967c0de1fdd\fmlcore-1.20.1-47.4.6.jar is missing mods.toml file
+[158月2025 00:27:48.616] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[158月2025 00:27:49.960] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\王睿阳\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, marcusmod, --all, --output, E:\forge1.20.1\src\generated\resources, --existing, E:\forge1.20.1\src\main\resources]
+[158月2025 00:27:50.417] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [marcusmod]
+[158月2025 00:27:54.839] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.6, for MC 1.20.1 with MCP 20230612.114412
+[158月2025 00:27:54.839] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.6 Initialized
+[158月2025 00:27:55.102] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[158月2025 00:27:55.111] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 6.580 ms
+[158月2025 00:27:55.411] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/王睿阳/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.6_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.6_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[158月2025 00:27:55.411] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/王睿阳/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.6_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.6_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[158月2025 00:27:55.613] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[158月2025 00:27:55.657] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 42 ms
+[158月2025 00:27:55.657] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[158月2025 00:27:55.713] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 56 ms
+[158月2025 00:27:55.713] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: marcusmod
+[158月2025 00:27:55.852] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: marcusmod finished after 138 ms
+[158月2025 00:27:55.852] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: marcusmod
+[158月2025 00:27:55.868] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: marcusmod finished after 16 ms
+[158月2025 00:27:55.870] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id marcusmod
+[158月2025 00:27:55.885] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id marcusmod finished after 15 ms
+[158月2025 00:27:55.885] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id marcusmod
+[158月2025 00:27:55.888] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id marcusmod finished after 2 ms
+[158月2025 00:27:55.888] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[158月2025 00:27:55.897] [main/ERROR] [net.minecraft.data.registries.RegistriesDatapackGenerator/]: Couldn't serialize element E:\forge1.20.1\src\generated\resources\data\marcusmod\worldgen\configured_feature\single_ore.json: Value 100 outside of range [0:64]
+[158月2025 00:27:55.903] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 15 ms
+[158月2025 00:27:55.903] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 289 ms
+[158月2025 00:27:55.910] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 136, old count: 133, new count: 137, removed stale: 0, written: 3

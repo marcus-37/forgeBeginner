@@ -49,32 +49,63 @@ public class crazyMachineRecipe implements Recipe<SimpleContainer> {
         this(countedIngredients, output, id, 100);
     }
 
-    public boolean matches(@NotNull SimpleContainer pContainer, Level pLevel) {
-        if (pLevel.isClientSide()) return false;
-
-        // 先判断是否所有 countedIngredient 的 ingredient 都是 simple（可选缓存）
-        boolean isSimple = this.countedIngredients.stream().allMatch(ci -> ci.ingredient.isSimple());
-
-        // 遍历容器，统计每个槽的堆叠（按真实 count）
-        // 我们直接对每个 CountedIngredient 计算总可用
-        for (crazyMachineRecipe.CountedIngredient ci : this.countedIngredients) {
-            int required = ci.count;
-            int available = 0;
-            for (int j = 0; j < pContainer.getContainerSize(); ++j) {
-                ItemStack stack = pContainer.getItem(j);
-                if (stack.isEmpty()) continue;
-                if (ci.ingredient.test(stack)) {
-                    // 使用 stack.getCount() 累加（允许一个槽提供多个单位）
-                    available += stack.getCount();
-                    if (available >= required) break;
-                }
-            }
-            if (available < required) return false;
+    public boolean matches(SimpleContainer container, Level level) {
+        // 构造临时可用池（副本）
+        List<ItemStack> available = new ArrayList<>();
+        for (int i = 0; i < container.getContainerSize(); i++) {
+            ItemStack s = container.getItem(i);
+            available.add(s.isEmpty() ? ItemStack.EMPTY : s.copy());
         }
-        // 全部满足
-        return true;
+
+        // 对每个 CountedIngredient 逐个消耗单位
+        for (CountedIngredient ci : countedIngredients) {
+            int need = ci.count;
+            for (int i = 0; i < available.size() && need > 0; i++) {
+                ItemStack stack = available.get(i);
+                if (stack.isEmpty()) continue;
+                if (!ci.ingredient.test(stack)) continue;
+                int take = Math.min(stack.getCount(), need);
+                need -= take;
+                stack.shrink(take);
+            }
+            if (need > 0) return false; // 这个 ingredient 无法满足
+        }
+        return true; // 所有需求满足
     }
 
+    // 返回配方需要的所有物品总数
+    public int getTotalRequiredItemCount() {
+        return countedIngredients.stream().mapToInt(ci -> ci.count).sum();
+    }
+
+    // 返回严格匹配（isSimple=false）原料的数量
+    public int getStrictIngredientCount() {
+        return (int) countedIngredients.stream()
+                .filter(ci -> !ci.ingredient.isSimple())
+                .count();
+    }
+
+    public int getDistinctIngredientTypeCountSimple() {
+        return this.countedIngredients == null ? 0 : this.countedIngredients.size();
+    }
+
+    @Override
+    public @NotNull NonNullList<Ingredient> getIngredients() {
+        NonNullList<Ingredient> list = NonNullList.create();
+        for (CountedIngredient ci : this.countedIngredients) {
+            for (int i = 0; i < ci.count; i++) list.add(ci.ingredient);
+        }
+        return list;
+    }
+
+    public int getTotalIngredientCount() {
+        return this.countedIngredients.stream().mapToInt(ci -> ci.count).sum();
+    }
+
+    // 返回配方中不同 ingredient 的数量（不考虑重复count）
+    public int getDistinctIngredientCount() {
+        return this.countedIngredients.size();
+    }
 
     @Override
     public ItemStack assemble(SimpleContainer pContainer, RegistryAccess pRegistryAccess) {
@@ -108,6 +139,10 @@ public class crazyMachineRecipe implements Recipe<SimpleContainer> {
     @Override
     public RecipeType<?> getType() {
         return Type.INSTANCE;
+    }
+
+    public int getPriority() {
+        return 0;
     }
 
     public static class Type implements RecipeType<crazyMachineRecipe> {
